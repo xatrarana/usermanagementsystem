@@ -1,0 +1,48 @@
+{{>navbar}}
+   
+    <div class="box">
+        <h1 style="color: #1a73e8;">Signin</h1>
+        <p>{{Errmessage}}</p>
+        <p>{{Sucessmessage}}</p>
+         <form action="/signin" method="post" enctype="multipart/form-data" >
+            <div class="inputBox">
+                <input type="text" name="name" value="">
+                <label>Name</label>
+            </div>
+            <div class="inputBox">
+                    <input type="email" name="email" value="">
+                    <label>Email</label>
+                </div>
+            <div class="inputBox">
+                    <input type="text" name="phoneno" value="">
+                    <label>Phone</label>
+                </div>
+            <div class="inputBox">
+                    <input type="file" name="image" value="">
+                    <label>Photo</label>
+                </div>
+            <div class="inputBox">
+                    <input type="text" name="address" value="">
+                    <label>Address</label>
+                </div>
+            <div class="inputBox">
+                    <input type="password" name="password" value="">
+                    <label>Password</label>
+                </div>
+            <div class="inputBox">
+                    <input type="password" name="cpassword" value="">
+                    <label>Confirm Password</label>
+                </div>
+            <input type="submit" name="sign-in" value="Sign In">
+        </form>
+    </div>
+    <script>
+      const email = document.querySelector('#email');
+      const password = document.querySelector('#password');
+      const cpassword = document.querySelector('#cpassword');
+
+      if(email.value == '' || password.value=='' || cpassword==''){
+        document.querySelector(#err).innerHTML = 'fields cannot be left blank';
+      }
+    </script>
+{{>footer}}
